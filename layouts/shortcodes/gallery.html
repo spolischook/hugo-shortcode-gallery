@@ -145,9 +145,13 @@ Ordinal: {{ .Ordinal}}
 					class="galleryImg"
 					{{ with $metadata }}
 						{{ if .Title }}
+							aria-label="Open full-size image of {{ .Title }}"
 							title="{{ .Title }}"
 						{{ else if .ImageDescription }}
+							aria-label="Open full-size image of {{ .ImageDescription }}"
 							title="{{ .ImageDescription }}"
+						{{ else }}
+							aria-label="Open full-size image"
 						{{ end }}
 
 						{{ if $showExif }}
