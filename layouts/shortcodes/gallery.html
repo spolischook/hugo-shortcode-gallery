@@ -192,10 +192,10 @@ Ordinal: {{ .Ordinal}}
 
 						{{ with $metadata }}
 							{{ if .ImageDescription }}
-								alt="{{ .ImageDescription }}"
+								aria-label="{{ .ImageDescription }}"
 					     		{{ else }}
 								{{ if .Title}}
-									alt="{{ .Title }}"
+									aria-label="{{ .Title }}"
 								{{ end }}
 							{{ end }}
 						{{ end }}
